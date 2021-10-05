@@ -1,8 +1,29 @@
-// import functions and grab DOM elements
+// const colors = ['red','white','blue'];
 
-// initialize global state
+// const random = getRandomNum(colors.length);
+// console.log(colors[random]);
+// example
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+import { answers } from './answers.js';
+
+const getRandomNum = (max)=>{
+  return Math.floor(Math.random() * max);
+}
+
+const answer = document.getElementById('answer');
+
+const btn = document.getElementById('btn');
+const questbox = document.getElementById('question-box');
+const bell = document.getElementById('audio');
+
+
+btn.addEventListener('click', ()=>{ 
+  answer.classList.remove('animated');
+  void answer.offsetWidth;
+  answer.classList.add('animated');
+  const quest = document.getElementById('question');
+  quest.value = ' ';
+  const randomAns = getRandomNum(answers.length);
+  return answer.textContent = answers[randomAns];
+  
+});
