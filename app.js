@@ -14,9 +14,8 @@ const answer = document.getElementById('answer');
 
 const btn = document.getElementById('btn');
 const questbox = document.getElementById('question-box');
-const bg = document.getElementById('bg');
-bg.volume = 0.9;
-bg.play();
+
+
 
 
 btn.addEventListener('click', ()=>{ 
